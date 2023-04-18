@@ -10,11 +10,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <link href="css/default.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <h2>Sistema de ensino</h2>
+        <h2>Cadastro do Pampa Cortes+</h2>
         <form method="post" action="UserDetails.php">
             <table>
                 <tr>
-                    <td>Matricula (número):</td>
+                    <td></td>
                     <td>
                         <!-- int matricula = 1872150 -->
                         <input type="number" name="matricula"
