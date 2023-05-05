@@ -8,10 +8,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         <meta charset="UTF-8">
         <title>Sistema de ensino</title>
         <link href="css/default.css" rel="stylesheet" type="text/css"/>
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js" type="text/javascript"></script>
     </head>
     <body>
         <h2>Sistema de ensino</h2>
-        <form method="post" action="UserDetails.php">
+        <form method="post" action="userDetails.php">
             <table>
                 <tr>
                     <td>Matricula (número):</td>
@@ -82,50 +85,32 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
             </table>
             <?php
             if ($_GET) {
-                
                 //Imprime tudo que estiver dentro do array.
                 //print_r($_GET);
-                @$matricula = $_GET['matricula']; //Armazena a Variavel Matricula.
+                @$matricula = $_GET['matricula'];
                 @$nome = $_GET['nome'];
                 @$turma = $_GET['turma'];
                 @$telefone = $_GET['telefone'];
                 @$endereco = $_GET['endereco'];
                 @$estado = $_GET['estado'];
                 
-                // || - OU
-                // && - E
-                if (empty($matricula) || empty($nome) || empty($turma) || empty($telefone) || empty($endereco) || empty($estado)) {
+                //|| - ou 
+                //&& - e
+                if (empty($matricula)|| empty($nome)
+                        || empty($turma) || empty($telefone) 
+                        || empty($endereco) || empty($estado)) {
                     echo('<div class="alert"> Todos os campos são obrigatórios. </div>');
-                    
                 }else{
-                    //Entra aqui se todos os campos obrigatórios forem preenchidos
-                
-                    $result = "Sua matricula é: ".$matricula."<br>"
-                        . "Seu nome é: ".$nome. "<br>" .
-                        "Sua turma é: " .$turma. "<br>"
-                        . "Seu telefone é: " .$telefone. "<br>"
-                        . "Seu endereço é: " .$endereco. "<br>"
-                        . "Seu estado é: " .$estado;
-                        
-                echo($result);
+                    //entra aqui se todos os campos obrigatórios forem preenchidos.
+                    // nomeCompleto = nome + sobrenome; //concatenação de strings
+                    $result = "Matricula: ".$matricula. "<br>Nome: ".$nome.
+                            "<br>Turma: ".$turma. "<br>Telefone: ".$telefone.
+                            "<br>Endereço: ".$endereco.
+                            "<br>Estado: ".$estado;
+                    echo($result);
                 }
                 
-                
-                
-                /*echo("Sua matrícula é: ". $matricula);
-                echo("<br>Seu nome é: ". $nome);
-                echo("<br>Sua turma é: ". $turma);
-                echo("<br>Seu telefone é: ". $telefone);
-                echo("<br>Seu endereço é: ". $endereco);
-                echo("<br>Seu estado é: ". $estado);
-                
-                $nome = $_GET['nome'];
-                echo("Seu nome é: ". $nome);
-                $turma = $_GET['turma'];
-                echo("<br>Sua turma é: ". $turma);   
-                $matricula = $_GET['matricula'];
-                echo("\nSua matrícula é: ". $matricula);*/
-                
+               
             }
             ?>
         </form>
