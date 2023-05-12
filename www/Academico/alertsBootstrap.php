@@ -13,19 +13,19 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
     </head>
     <body>
         <div class="alert alert-success">
-            <strong>Success!</strong> Indica um sucesso ou uma ação positiva.
+            <strong>Success!</strong> Indicates a successful or positive action.
         </div>
 
         <div class="alert alert-info">
-            <strong>Info!</strong> Indica uma mudança informativa neutra ou ação..
+            <strong>Info!</strong> Indicates a neutral informative change or action.
         </div>
 
         <div class="alert alert-warning">
-            <strong>Warning!</strong> Indica um alerta que provavelmente precisa de atenção.
+            <strong>Warning!</strong> Indicates a warning that might need attention.
         </div>
 
         <div class="alert alert-danger">
-            <strong>Danger!</strong> Indica um perigo ou um ação potencialmente negativa.
+            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
         </div>
     </body>
 </html>

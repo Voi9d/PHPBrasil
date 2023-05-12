@@ -15,7 +15,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
                 background-color: purple;
                 border-color: black;
             }
-            
+
             .btn-danger:hover{
                 background-color: greenyellow;
                 border-color: black;
@@ -25,22 +25,23 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
     <body>
         <form method="post" action="buttonBoostrap.php">
             <input type="text" name="teste">
-        <input class="btn btn-success" type="submit" value="Enviar">
-        <a  class="btn btn-danger" href="#">Google</a>
-        <input class="btn btn-link" type="submit" value="Enviar">
-        
-        <?php
-        if($_POST) {
-            $texto = $_POST['teste'];
-            if(!empty($texto)) {
-                header("location: http://www.ufsm.br");
-            }else{
-                echo(' <div class="alert alert-danger">
-                        <strong>Atenção!</strong> O campo não pode estar vazio.
-                           </div>');
+            <input class="btn btn-success" type="submit" value="Enviar">
+            <a  class="btn btn-danger" href="#">Google</a>
+            <input class="btn btn-link" type="submit" value="Enviar">
+            
+            <?php
+            if ($_POST) {
+                $texto = $_POST['teste'];
+                if (!empty($texto)) {
+                    header("location: http://www.ufsm.br");
+                    
+                }else{
+                    echo(' <div class="alert alert-danger">
+                            <strong>Atenção!</strong> O campo não pode ser vazio.
+                            </div>');
+                }
             }
-        }
-        ?>
+            ?>
         </form>
     </body>
 </html>
