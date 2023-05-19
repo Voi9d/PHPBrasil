@@ -15,6 +15,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     <body>
         <h2>Sistema de ensino</h2>
         <form method="post" action="userDetails.php">
+            <div class="col-md-4">
+                <img src="img/campus-ufsm-gilciano-sala-2-.jpg" alt=""/>
+            </div>
             <table>
                 <tr>
                     <td>Matricula (número):</td>
